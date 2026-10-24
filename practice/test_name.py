@@ -22,7 +22,6 @@
 #     # Негативный тест: пустая строка
 #     name_field.send_keys("")
 #     # Проверка сообщения об обязательности поля
-from pyexpat.errors import messages
 
 # num="1"
 # num2="2"
