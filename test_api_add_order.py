@@ -8,8 +8,8 @@ def test_create_order_success():
     # Проверка создания заказа через POST-запрос
     url = "https://petstore.swagger.io/v2/store/order"
     payload = {
-        "id": 19999,
-        "petId": 19999,
+        "id": 200000,
+        "petId": 200000,
         "quantity": 0,
         "shipDate": "2026-05-14T09:24:18.340Z",
         "status": "placed",
@@ -24,6 +24,6 @@ def test_create_order_success():
     data = response.json()
     assert data["status"] == "placed", f"Статус заказа не 'placed', а '{data['status']}'"
     assert data["complete"] == True, "Поле complete должно быть True"
-    assert data["id"] == 19999, "ID заказа не совпадает"
+    assert data["id"] == 200000, "ID заказа не совпадает"
 
     print(f" Тест пройден! Статус: {response.status_code}, Заказ: {data['id']}")
